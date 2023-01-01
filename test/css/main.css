@@ -1,0 +1,76 @@
+  .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .item{
+    display: block;
+  
+  }
+  
+  .dim{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  .dimback{
+    background: rgb(29, 31, 59);
+  }
+
+  .text {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-size: 100px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .text::before {
+    content: attr(data-text);
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    text-shadow: 2px 0 red;
+    left: -2px;
+    clip-path: inset(0 0 0 0);
+    animation: ani2 2s infinite linear alternate-reverse;
+  }
+  
+  .text::after {
+    content: attr(data-text);
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    text-shadow: -2px 0 blue;
+    left: 2px;
+    clip-path: inset(0 0 0 0);
+    animation: ani1 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes ani1 {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+    5% {
+        clip-path: inset(68px 0 32px 0);
+    }
+    10% {
+        clip-path: inset(23px 0 67px 0);
+    }
+    100% {
+        clip-path: inset(5px 0 87px 0);
+    }
+    
+  }
+  
+  @keyframes ani2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip-path: inset(random(100) + px 0 random(100) + px 0);
+    }
+  }
+  
+  .main-bg{
+    background-image: url("/1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}

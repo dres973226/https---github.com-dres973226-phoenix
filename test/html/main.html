@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+      <link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+      <link rel="stylesheet" href="main.css" type="text/css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <title>專題</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+        <div class="container">
+          <a class="navbar-brand" href="#">今天要來點2D臉嗎?</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">登出</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/history.html">歷史紀錄</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/personal.html">個人主頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/donate.html">類donate區</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- 大圖輪播+遮罩-->
+    <div class ="dimback">
+        <div class="item">
+            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                <div class="dimback">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="10000">
+                          <img src="/1.jpg" class ="dim" alt="">
+                        </div>
+                        <div class="carousel-item" data-interval="10000">
+                          <img src="/2.jpg" class ="dim" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/3.jpg" class ="dim" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 字幕+連結-->
+            <div class="carousel-caption d-none d-md-block" style="position: absolute; top:50%; left:10%;">
+                <a href="/face.html">
+                    <div class="text" data-text="start changes!"></div>
+                </a>  
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
