@@ -8,27 +8,27 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <title>專題</title>
   </head>
-  <body>
+  <body style="background-color:#8ba3c728;">
     <!-- bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <nav style="background-color: rgba(52, 75, 92);" class="navbar navbar-expand-lg navbar-light static-top mb-5 shadow">
         <div class="container">
-          <a class="navbar-brand" href="/main.html">今天要來點2D臉嗎?</a>
+          <a style="color:rgb(223, 224, 224);" class="navbar-brand" href="/main.html">今天要來點2D臉嗎?</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">登出</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/">登出</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/history.html">歷史紀錄</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/history.html">歷史紀錄</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/personal.html">個人主頁</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/personal.html">貼文</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/donate.html">類donate區</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/donate.html">類donate區</a>
               </li>
             </ul>
           </div>
@@ -42,8 +42,7 @@
         <!-- tital -->
             <header>
               <div class="title">
-                <h2>發表圖片</h2>
-                <p>( /  ● ▽ ● )/</p>
+                <h2>轉正臉中... ( /  ● ▽ ● )/</h2><br>
               </div>
             </header>
 
@@ -53,13 +52,11 @@
               <header>
                 <div class="image featured">
                     <!--選擇圖檔(自訂格式)-->
-                    <input type="file" name="file" onchange = "readURL(this)" targetid = "img" accept="image/jpeg, image/jpg"/>
-                    <br>
+                    <input type="file" name="file" onchange = "readURL(this)" targetid = "img" accept="image/jpeg, image/jpg"/><br>
                 </div>
               </header>
               <h3>預覽：</h3>
-              <img class="image featured" id="img" src="#" />
-              <br><br>
+              <img class="image featured" id="img" src="#" /><br><br>
               <footer>
                   <input type="submit" class="btn btn-outline-secondary" value="upload" onclick="location.href='/success.html'"/>
                   <input type="button" class="btn btn-outline-secondary" value="discard" onclick="giveup(this)"/>
@@ -74,29 +71,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script >
-      function giveup(input) {
-        var r = confirm("是否放棄此次編輯？");
-        if (r == true) {
-            x = location.href = "/main.html";
-        } else {
-            x = "放棄";
-        }
-      }
-    </script>
-
-    <script>
-      function readURL(input){
-        if(input.files && input.files[0]){
-          let imageTagID = input.getAttribute("targetID");
-          let reader = new FileReader();
-          reader.onload = function (e) {
-             var img = document.getElementById(imageTagID);//查找特定元素(imageTagID)
-             img.setAttribute("src", e.target.result)//圖像的解析路徑(到預覽的src)
-          }
-          reader.readAsDataURL(input.files[0]);//因為單選的關係，所以有檔案一定是在第0個
-        }
-      }
-  </script>
+    <script src="readURL.js"></script>
+    <script src="giveup.js"></script>
   </body>
 </html>

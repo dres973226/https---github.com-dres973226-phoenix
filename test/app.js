@@ -50,6 +50,13 @@ router.get('/history.html', async (ctx, next) => {
     ctx.body = fs.createReadStream(`${position}/html/history.html`);
 });
 
+// Router -> /post_history
+router.get('/post_history.html', async (ctx, next) => {
+    console.log("Rsponse post_history page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/html/post_history.html`);
+});
+
 // Router -> /donate
 router.get('/donate.html', async (ctx, next) => {
     console.log("Rsponse donate page");
@@ -120,6 +127,23 @@ router.get('/main.css', async (ctx, next) => {
     ctx.body = fs.createReadStream(`${position}/css/main.css`);
 });
 
+router.get("/showmore.js", async (ctx, next) => {
+    console.log("Rsponse showmore.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/js/showmore.js`);
+});
+
+router.get("/readURL.js", async (ctx, next) => {
+    console.log("Rsponse readURL.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/js/readURL.js`);
+});
+
+router.get("/giveup.js", async (ctx, next) => {
+    console.log("Rsponse giveup.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/js/giveup.js`);
+});
 
 router.post('/submission.html', async (ctx, next) => {
     ctx.type = "html";

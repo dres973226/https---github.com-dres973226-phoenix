@@ -5,12 +5,14 @@
   }
   .item{
     display: block;
-  
   }
   
   .dim{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    display: block;
+		margin: 0 0 0 0;
+		width: 100%;
   }
   .dimback{
     background: rgb(29, 31, 59);

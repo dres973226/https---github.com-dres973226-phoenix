@@ -10,27 +10,27 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <title>專題</title>
   </head>
-  <body style="background-color:rgba(160, 160, 160, 0.075);">
+  <body style="background-color:#8ba3c728;">
     <!-- bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <nav style="background-color: rgba(52, 75, 92);" class="navbar navbar-expand-lg navbar-light static-top mb-5 shadow">
         <div class="container">
-          <a class="navbar-brand" href="/main.html">今天要來點2D臉嗎?</a>
+          <a style="color:rgb(223, 224, 224);" class="navbar-brand" href="/main.html">今天要來點2D臉嗎?</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">登出</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/">登出</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/history.html">歷史紀錄</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/history.html">歷史紀錄</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/personal.html">個人主頁</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/personal.html">貼文</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/donate.html">類donate區</a>
+                <a style="color:rgb(223, 224, 224);" class="nav-link" href="/donate.html">類donate區</a>
               </li>
             </ul>
           </div>
@@ -43,8 +43,7 @@
       <!-- tital -->
           <header>
             <div class="title">
-              <h2>發表文章</h2>
-              <p>( ～  ● ▽ ● )～</p>
+              <h2>發表文章 ( ～  ● ▽ ● )～</h2><br>
             </div>
           </header>
 
@@ -53,40 +52,26 @@
           <section>
             <form action="success.html" method="post">
               <div>
-                <br>
-                <div>
-                  <textarea name="message" placeholder="Enter your message" rows="6"></textarea>
-                </div>
-                <div >
-                    <br>
-                    <input type="submit" class="btn btn-outline-secondary" value="Send" onclick="location.href='/success.html'"/>
-                    <input type="button" class="btn btn-outline-secondary" value="discard" onclick="giveup(this)"/>
-                    <input type="reset" class="btn btn-outline-secondary" value="Reset" />
-                </div>
+                <p>主旨：</p>
+                <textarea name="title" placeholder="Enter your title" rows="1"></textarea><br>
+                <p>內文：</p>
+                <textarea name="message" placeholder="Enter your message" rows="6"></textarea><br>
+              </div>
+              <div >
+                  <input type="submit" class="btn btn-outline-secondary" value="Send" onclick="location.href='/success.html'"/>
+                  <input type="button" class="btn btn-outline-secondary" value="discard" onclick="giveup(this)"/>
+                  <input type="reset" class="btn btn-outline-secondary" value="Reset" />
               </div>
             </form>
           </section>
         </article>
     </div>
-    
-   
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script >
-      function giveup(input) {
-        var r = confirm("是否放棄此次編輯？");
-        if (r == true) {
-            x = location.href = "/main.html";
-        } else {
-            x = "放棄";
-        }
-      }
-      
-    </script>
+    <script src="giveup.js"></script>
   </body>
 </html>
